@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "First SLide!",
+        "backgroundColor": "red",
+        "info": "hello! It`s first slide"
+    },
+    {
+        "id": 2,
+        "title": "Second SLide!",
+        "backgroundColor": "blue",
+        "info": "hello! It`s second slide. Let`s continue"
+    },
+    {
+        "id": 3,
+        "title": "Third SLide!",
+        "backgroundColor": "green",
+        "info": "It`s third slide. Time to break"
+    },
+    {
+        "id": 4,
+        "title": "4 SLide!",
+        "backgroundColor": "black",
+        "info": "It`s third slide. Time to break"
+    },
+    {
+        "id": 5,
+        "title": "5 SLide!",
+        "backgroundColor": "orange",
+        "info": "It`s third slide. Time to break"
+    }
+]

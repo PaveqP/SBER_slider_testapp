@@ -1,0 +1,31 @@
+.header{
+
+    &__row{
+        margin-left: 20px;
+        margin-right: 20px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #4CA45C;
+        font-family: "Roboto";
+        color: white;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+
+        a{
+            color: white;
+        }
+    }
+
+    &__title{
+
+    }
+}
