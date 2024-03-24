@@ -15,14 +15,24 @@ const SlideList:FC<SlideListProps> = ({offset, currentSlide, data}) => {
     <section className="slideList">
         <div className="slideList__window">
             <div className="slideList__slides" style={{transform: `translateX(${offset}px)`}}>
-                {data?.map((slide: {id: number, title: string, backgroundColor: string, info: string}) => (
-                    <Slide key={slide.id} id={slide.id} title={slide.title} backgroundColor={slide.backgroundColor} info={slide.info}/>
+                {data?.map((slide: ISlide) => (
+                    <Slide 
+                        key={slide.id} 
+                        id={slide.id} 
+                        title={slide.title} 
+                        backgroundColor={slide.backgroundColor} 
+                        color={slide.color}
+                        info={slide.info}
+                        image={slide.image}
+                    />
                 ))
                 }
             </div>
         </div>
         <div className="slideList__counter">
-            {currentSlide} / {data?.length}
+            <p className='counter-num'>{currentSlide}</p> 
+            <p className='counter-sep'>/</p>
+            <p className='counter-total'>{data?.length}</p>
         </div>
     </section>
   )

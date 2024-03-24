@@ -2,10 +2,38 @@
     margin-top: 20px;
     display: flex;
     gap: 20px;
-    button{
-        width: 100px;
+
+    &__button{
+        width: 150px;
         font-size: 16px;
-        padding: 10px 20px;
-        border-radius: 15px;
+        padding: 10px 20px 6px 20px;
     }
+
+    &__button:hover{
+        transform: scale(1.05);
+        transition: 0.2s;
+    }
+
+    &__button:not(:hover){
+        transform: scale(1);
+        transition: 0.2s;
+    }
+}
+
+.prevButton{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.playButton:focus{
+    box-shadow: 0px 0px 2px blue;
+}
+
+.pauseButton{
+    
+}
+
+.nextButton{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

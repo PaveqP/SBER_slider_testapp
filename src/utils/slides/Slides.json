@@ -1,32 +1,66 @@
 [
     {
         "id": 1,
-        "title": "First SLide!",
-        "backgroundColor": "red",
-        "info": "hello! It`s first slide"
+        "title": "Slides project",
+        "backgroundColor": "#615DFF",
+        "color": "white",
+        "info": "Демонстрация отображения слайдов",
+        "image": ""
     },
     {
         "id": 2,
-        "title": "Second SLide!",
-        "backgroundColor": "blue",
-        "info": "hello! It`s second slide. Let`s continue"
+        "title": "Слайд с картинкой",
+        "backgroundColor": "#B85DFF",
+        "color": "white",
+        "info": "При появлении изображения, макет слайда перестраивается в две колонки. Для демонстрации представлено изображение профиля на GitHub. Данные для слайда взяты из JSON файла.",
+        "image": "../../../src/utils/images/gitSlide.png"
     },
     {
         "id": 3,
-        "title": "Third SLide!",
-        "backgroundColor": "green",
-        "info": "It`s third slide. Time to break"
+        "title": "Слайд с информацией",
+        "backgroundColor": "#915DFF",
+        "color": "white",
+        "info": "На слайде предсталвена информация о структуре JSON файла. Благодаря нему, можно подготовить любую информацию для отображения!",
+        "image": "../../../src/utils/images/JSON.png"
     },
     {
         "id": 4,
-        "title": "4 SLide!",
-        "backgroundColor": "black",
-        "info": "It`s third slide. Time to break"
+        "title": "Слайд без картинки",
+        "backgroundColor": "#615DFF",
+        "color": "white",
+        "info": "Если изображение отсутствует, вся информация на слайде перестраивается и располагается по центру. ",
+        "image": ""
     },
     {
         "id": 5,
-        "title": "5 SLide!",
-        "backgroundColor": "orange",
-        "info": "It`s third slide. Time to break"
+        "title": "Auto play",
+        "backgroundColor": "#B85DFF",
+        "color": "white",
+        "info": "Если включить режим автоматичекого переключения слайдов, они будут переключаться автоматически раз в 3 секунды. Когда мы достигнем последнего слайда, показ автоматически начнется сначала. Чтобы остановить автоматическое переключение, достаточно нажать кнопку паузы и воспользоваться любым из ручных переключателей (вперёд/назад)",
+        "image": "../../../src/utils/images/autoPlay.png"
+    },
+    {
+        "id": 6,
+        "title": "Попробуйте разные режимы переключения!",
+        "backgroundColor": "#615DFF",
+        "color": "white",
+        "info": "Переключение слайдов в любом режиме сопровождается плавной анимацией, а при ручном управлении предусмотрено поведение при многократном нажатии на кнопки с элементами управления.",
+        "image": ""
+    },
+    {
+        "id": 7,
+        "title": "Архитектура проекта",
+        "backgroundColor": "#915DFF",
+        "color": "white",
+        "info": "В проекте используется классическая модульная архитектура. Её выбор связан с тем, что проект является относительно небольшим, содержит только одну страницу.",
+        "image": "../../../src/utils/images/structure.png"
+    },
+    {
+        "id": 8,
+        "title": "Спасибо за внимание!",
+        "backgroundColor": "#615DFF",
+        "color": "white",
+        "info": "",
+        "image": ""
     }
 ]

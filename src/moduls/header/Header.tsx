@@ -6,8 +6,7 @@ function Header() {
     <header>
       <div className="header__row">
         <div className="header__info">
-          test app
-          <a href="">by Pavel</a>
+          Test app
         </div>
         <p className="header__title">
           #Slider
