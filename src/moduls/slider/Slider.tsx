@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { SlideList, Controllers } from '../../components'
 import { ISlide } from '../../components/types'
 import slides from '../../utils/slides/Slides.json'

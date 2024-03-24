@@ -1,22 +1,18 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
+import { ISlide } from '../types'
+import img2 from '../../utils/images/2.png'
+import img3 from '../../utils/images/3.png'
+import img5 from '../../utils/images/5.png'
+import img7 from '../../utils/images/7.png'
 import './Slide.scss'
 
-interface SlideProps{
-    id: number,
-    title: string,
-    backgroundColor: string,
-    color: string,
-    info: string,
-    image: string
-}
-
-const Slide:FC<SlideProps> = ({title, backgroundColor, color, info, image}) => {
+const Slide:FC<ISlide> = ({id, title, backgroundColor, color, info, image}) => {
   return (
     <div style={{backgroundColor: backgroundColor, color: color}} className='slide'>
       {image ?
         <div className="slide__row">
           <img className='slide__image' 
-            src={require(image)} alt="image" 
+            src={id === 2 ? img2 : id === 3 ? img3 : id === 5 ? img5 : img7} alt="image" 
             style={{boxShadow: `0px 0px 20px ${color}`}} 
           />
           <div className="slide__textContent" style={{maxWidth: "500px"}}>

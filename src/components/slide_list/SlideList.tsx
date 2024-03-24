@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Slide } from '../slide/Slide'
 import { ISlide } from '../types'
 import './SlideList.scss'

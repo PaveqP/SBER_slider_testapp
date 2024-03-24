@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { ISlide  } from '../types'
 import { Play, Pause, LeftArrow, RightArrow } from '../../utils'
 import './Controllers.scss'
@@ -12,11 +12,10 @@ interface ControllersProps{
 const Controllers:FC<ControllersProps> = ({setOffset, setCurrentSlide, data, currentSlide}) => {
 
     const timer = useRef<NodeJS.Timeout | null>(null)
-    const [nextActive, setNextActive] = useState(true)
+    const [nextActive, setNextActive] = useState<boolean>(true)
+    const [isPlaying, setIsPlaying] = useState<boolean>(false)
     const min: number = 1
     const max = data?.length
-
-    console.log(timer.current!)
 
     const handleNextSlide = useCallback((auto: boolean) => {
         setNextActive(false)
@@ -34,6 +33,7 @@ const Controllers:FC<ControllersProps> = ({setOffset, setCurrentSlide, data, cur
     }, [setCurrentSlide, setOffset, max, setNextActive])
 
     const handlePrevSlide = useCallback(() => {
+        if (currentSlide === 1) return
         setNextActive(false)
         handleStop()
         if ((currentSlide - 1) < min) return
@@ -44,6 +44,7 @@ const Controllers:FC<ControllersProps> = ({setOffset, setCurrentSlide, data, cur
 
     const handlePlay = useCallback(() => {
         if (!timer.current){
+            setIsPlaying(true)
             timer.current = setInterval(() => {
                 handleNextSlide(true)
             }, 3000)
@@ -51,6 +52,7 @@ const Controllers:FC<ControllersProps> = ({setOffset, setCurrentSlide, data, cur
     }, [handleNextSlide])
 
     const handleStop = useCallback(() => {
+        setIsPlaying(false)
         clearInterval(timer.current!)
         timer.current = null
     }, [])
@@ -61,10 +63,15 @@ const Controllers:FC<ControllersProps> = ({setOffset, setCurrentSlide, data, cur
         }
     }, [])
 
+    console.log(!!timer.current)
+
   return (
     <div className="controllers">
         <button className='controllers__button prevButton' onClick={() => nextActive && handlePrevSlide()}><LeftArrow/></button>
-        <button className='controllers__button playButton' onClick={handlePlay}><Play/></button>
+        <button className='controllers__button playButton' style={isPlaying ? {
+            boxShadow: "0px 0px 2px blue"
+        } : {}
+        } onClick={handlePlay}><Play/></button>
         <button className='controllers__button pauseButton' onClick={handleStop}><Pause/></button>
         <button className='controllers__button nextButton' onClick={() => nextActive && handleNextSlide(false)}><RightArrow/></button>
     </div>
